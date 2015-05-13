@@ -1,4 +1,4 @@
-# The official raywenderlich.com Objective-C style guide.
+# The official Grab Team Objective-C style guide.
 
 This style guide outlines the coding conventions for raywenderlich.com.
 
@@ -146,17 +146,6 @@ else {
 
 ```objc
 // blocks are easily readable
-[UIView animateWithDuration:1.0 animations:^{
-  // something
-} completion:^(BOOL finished) {
-  // something
-}];
-```
-
-**Not Preferred:**
-
-```objc
-// colon-aligning makes the block indentation hard to read
 [UIView animateWithDuration:1.0
                  animations:^{
                      // something
@@ -164,6 +153,28 @@ else {
                  completion:^(BOOL finished) {
                      // something
                  }];
+```
+
+**Not Preferred:**
+
+```objc
+[UIView animateWithDuration:1.0 animations:^{
+  // something
+} completion:^(BOOL finished) {
+  // something
+}];
+
+[UIView 
+animateWithDuration:1.0 
+animations:
+^{
+  // something
+}
+completion:
+^(BOOL finished) {
+  // something
+}];
+
 ```
 
 ## Comments
